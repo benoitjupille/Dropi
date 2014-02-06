@@ -45,7 +45,7 @@ float release;
 
 /*---------------------------------------------------------------- SETUP */
 void setup() {
-  size(displayWidth - 100, displayHeight - 100);
+  size(displayWidth, displayHeight);
   smooth();
   
   /* Ouverture et démarrage du patch Pure Data */
@@ -178,4 +178,8 @@ void afficheGouttes(){
       gouttes.get(i).diametre = 0;
     }
   }
+}
+
+boolean sketchFullScreen() {
+  return true;
 }
