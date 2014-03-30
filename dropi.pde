@@ -107,16 +107,11 @@ void playNote(){
     nbOscillateurs = 1;
   }
   pd.sendFloat("tremolo" + nbOscillateurs, tremolo);
-  pd.sendFloat("tremolo", tremolo);
   pd.sendFloat("attack" + nbOscillateurs, attack);
-  pd.sendFloat("attack", attack);
   pd.sendFloat("release" + nbOscillateurs, release);
-  pd.sendFloat("release", release);
   pd.sendFloat("note" + nbOscillateurs, noteGeneree);
-  pd.sendFloat("note", noteGeneree);
   
   pd.sendBang("banger" + nbOscillateurs);
-  pd.sendBang("banger");
 }
 
 /* Lis les valeurs de l'Arduino */
