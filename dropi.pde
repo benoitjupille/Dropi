@@ -106,12 +106,20 @@ void playNote(){
   if(nbOscillateurs == 5){
     nbOscillateurs = 1;
   }
+  
+  /* Oscillateurs de 1 à 4 */
   pd.sendFloat("tremolo" + nbOscillateurs, tremolo);
   pd.sendFloat("attack" + nbOscillateurs, attack);
   pd.sendFloat("release" + nbOscillateurs, release);
   pd.sendFloat("note" + nbOscillateurs, noteGeneree);
-  
   pd.sendBang("banger" + nbOscillateurs);
+  
+  /* Oscillateur 5 qui joue tout le temps */
+  pd.sendFloat("tremolo", tremolo);
+  pd.sendFloat("attack", attack);
+  pd.sendFloat("release", release);
+  pd.sendFloat("note", noteGeneree);
+  pd.sendBang("banger");
 }
 
 /* Lis les valeurs de l'Arduino */
